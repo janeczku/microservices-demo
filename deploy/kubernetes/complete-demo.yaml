@@ -86,8 +86,6 @@ spec:
          - name: JAVA_OPTS
            value: -Xms64m -Xmx128m -XX:PermSize=32m -XX:MaxPermSize=64m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
           capabilities:
             drop:
               - all
@@ -181,8 +179,6 @@ spec:
         ports:
         - containerPort: 80
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
           capabilities:
             drop:
               - all
@@ -227,8 +223,6 @@ spec:
         ports:
         - containerPort: 8079
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
           capabilities:
             drop:
               - all
@@ -327,8 +321,6 @@ spec:
         ports:
         - containerPort: 80
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
           capabilities:
             drop:
               - all
@@ -381,8 +373,6 @@ spec:
         - name: ZIPKIN
           value: http://zipkin.zipkin.svc.cluster.local:9411/api/v1/spans
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
           capabilities:
             drop:
               - all
@@ -512,8 +502,6 @@ spec:
         ports:
         - containerPort: 80
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
           capabilities:
             drop:
               - all
@@ -621,8 +609,6 @@ spec:
         - name: ZIPKIN
           value: http://zipkin.zipkin.svc.cluster.local:9411/api/v1/spans
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
           capabilities:
             drop:
               - all
